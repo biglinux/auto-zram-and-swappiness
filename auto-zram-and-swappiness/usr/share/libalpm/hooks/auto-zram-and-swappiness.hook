@@ -6,4 +6,4 @@ Target =  auto-zram-and-swappiness
 [Action]
 Description = Automatic enable auto-zram-and-swappiness
 When = PostTransaction
-Exec = /usr/bin/sysctl enable auto-zram-and-swappiness
+Exec = systemctl enable auto-zram-and-swappiness
