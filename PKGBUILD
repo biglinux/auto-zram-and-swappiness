@@ -12,5 +12,4 @@ md5sums=(SKIP)
 
 package() {
     cp -r "${srcdir}/auto-zram-and-swappiness/auto-zram-and-swappiness/usr/" "${pkgdir}/"
-    cp -r "${srcdir}/auto-zram-and-swappiness/auto-zram-and-swappiness/lib/" "${pkgdir}/"
 } 
