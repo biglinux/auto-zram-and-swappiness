@@ -1,0 +1,9 @@
+[Trigger]
+Type = Package
+Operation = Install
+Target =  auto-zram-and-swappiness
+
+[Action]
+Description = Automatic enable auto-zram-and-swappiness
+When = PostTransaction
+Exec = sysctl enable zram-config
