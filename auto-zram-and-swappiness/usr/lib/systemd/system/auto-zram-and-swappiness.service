@@ -1,6 +1,6 @@
 [Unit]
-Description=Initializes zram swaping
-After=systemd-user-sessions.service user-runtime-dir@%i.service dbus.service
+DefaultDependencies=no
+After=systemd-fsck-root.service
 
 [Service]
 ExecStart=/usr/bin/init-zram-swapping
