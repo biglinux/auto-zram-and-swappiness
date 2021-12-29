@@ -86,7 +86,7 @@ echo 5 > /proc/sys/vm/dirty_background_ratio
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-set -eu
+#set -eu
 
 LATENCY_MS=4
 MIN_GRANULARITY_MS=0.4
