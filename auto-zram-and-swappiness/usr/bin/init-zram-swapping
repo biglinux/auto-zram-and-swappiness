@@ -87,7 +87,7 @@ echo 5 > /proc/sys/vm/dirty_background_ratio
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #set -eu
-
+# 
 LATENCY_MS=4
 MIN_GRANULARITY_MS=0.4
 WAKEUP_GRANULARITY_MS=0.5
@@ -114,7 +114,7 @@ MIN_GRANULARITY_NS_FILE="/sys/kernel/debug/sched/min_granularity_ns"
 WAKEUP_GRANULARITY_NS_FILE="/sys/kernel/debug/sched/wakeup_granularity_ns"
 MIGRATION_COST_NS_FILE="/sys/kernel/debug/sched/migration_cost_ns"
 BANDWIDTH_SIZE_US_FILE="/proc/sys/kernel/sched_cfs_bandwidth_slice_us"
-
+# 
 if [ ! -f "$LATENCY_NS_FILE" ]; then
     echo "Detected kernel <5.13. Using legacy locations."
     LATENCY_NS_FILE="/proc/sys/kernel/sched_latency_ns"
