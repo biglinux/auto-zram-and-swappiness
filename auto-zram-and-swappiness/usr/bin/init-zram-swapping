@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Disable THP
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+
 # load dependency modules
 NRDEVICES=$(grep -c ^processor /proc/cpuinfo | sed 's/^0$/1/')
 if modinfo zram | grep -q ' zram_num_devices:' 2>/dev/null; then
