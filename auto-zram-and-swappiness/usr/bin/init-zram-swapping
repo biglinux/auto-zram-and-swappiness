@@ -28,3 +28,10 @@ for i in $(seq ${NRDEVICES}); do
   mkswap /dev/zram${DEVNUMBER}
   swapon -p 100 /dev/zram${DEVNUMBER}
 done
+
+
+# Start swap in disk
+
+for i in $(blkid | grep 'TYPE="swap"' | grep -v zram | cut -f1 -d:); do
+  swapon $i 2> /dev/null
+done
